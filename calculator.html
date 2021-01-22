@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="calculator.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+       
+        <div id="calculatorArea">
+            <input id="firstNum" placeholder="Enter number"/>
+            <input id="secondNum" placeholder="Enter number"/>
+            <div id="buttons">
+                <button class="button" onclick="add()">Add</button>
+                <button class="button" onclick="subtract()">Subtract</button>
+                <button class="button" onclick="multiply()">Multiply</button>
+                <button class="button" onclick="divide()">Divide</button>
+            </div>
+            <input id="answer" placeholder="Answer" readonly/>
+        </div>
+    </div>
+    <script>
+        function add() {
+            let firstNum = document.getElementById("firstNum")
+            let secondNum = document.getElementById("secondNum")
+            document.getElementById("answer").value = parseFloat(firstNum.value) + parseFloat(secondNum.value)
+        }
+        function subtract() {
+            let firstNum = document.getElementById("firstNum")
+            let secondNum = document.getElementById("secondNum")
+            document.getElementById("answer").value = parseFloat(firstNum.value) - parseFloat(secondNum.value)
+        }
+        function multiply() {
+            let firstNum = document.getElementById("firstNum")
+            let secondNum = document.getElementById("secondNum")
+            document.getElementById("answer").value = parseFloat(firstNum.value) * parseFloat(secondNum.value)
+        }
+        function divide() {
+            let firstNum = document.getElementById("firstNum")
+            let secondNum = document.getElementById("secondNum")
+            document.getElementById("answer").value = parseFloat(firstNum.value) / parseFloat(secondNum.value)
+        }
+    </script>
+</body>
+
+</html>
